@@ -35,11 +35,7 @@ pipeline
 	sh "docker version"
 	sh "docker build  -t 8297762265/archiveArtifacts:newt -f Dockerfile ."
 	sh "docker run -p 9080:8080 -d 8297762265/archiveArtifacts:newt"
-	withDockerRegistry(credentialsId: 'docker-hub-registry') {
-    sh "docker push 8297762265/archiveArtifacts:newt "
-    }
 	}
 	}
-}
 }
 }
