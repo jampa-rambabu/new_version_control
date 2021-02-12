@@ -33,7 +33,7 @@ pipeline
 	stage('deployment of Application using Docker'){
 	steps{
 	sh "docker version"
-	sh "cd /var/lib/jenkins/workspace/Jenkins_maven_docker_git_s3_1; docker build  -t 8297762265/archiveartifacts:newtag -f Dockerfile ."
+	sh "cd /opt/docker; docker build  -t 8297762265/archiveartifacts:newtag -f Dockerfile ."
 	sh "docker run -p 9080:8080 -d 8297762265/archiveartifactsrtifacts:newtag"
 	}
 	}
