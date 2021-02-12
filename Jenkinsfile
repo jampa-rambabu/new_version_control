@@ -33,8 +33,8 @@ pipeline
 	stage('deployment of Application using Docker'){
 	steps{
 	sh "docker version"
-	sh "docker build  -t 8297762265/archiveArtifacts:newt -f Dockerfile ."
-	sh "docker run -p 9080:8080 -d 8297762265/archiveArtifacts:newt"
+	sh "docker build  -t 8297762265/archiveartifacts:newtag -f Dockerfile ."
+	sh "docker run -p 9080:8080 -d 8297762265/archiveartifactsrtifacts:newtag"
 	}
 	}
 }
