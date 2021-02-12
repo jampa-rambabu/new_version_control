@@ -34,7 +34,7 @@ pipeline
 	steps{
 	sh "docker version"
 	sh "cd /opt/docker; docker build  -t 8297762265/archiveartifacts:newtag -f Dockerfile ."
-	sh "docker run -p 9080:8080 -d 8297762265/archiveartifacts:newtag"
+	sh "docker run -p 8090:8080 -d 8297762265/archiveartifacts:newtag"
 	}
 	}
 }
