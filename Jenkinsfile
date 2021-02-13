@@ -33,8 +33,9 @@ pipeline
 	stage('deployment of Application using Docker'){
 	steps{
 	sh "docker version"
-	sh "cd /opt/docker; docker build  -t 8297762265/archiveartifacts:newtag -f Dockerfile ."
-	sh "docker run -p 3080:8080 -d 8297762265/archiveartifacts:newtag"
+	sh "cd /opt/docker; docker build  -t 8297762265/archiveartifacts:newtag -f Dockerfile ."  
+	sh "docker run -itd --name=mycon-9 -P 8297762265/archiveartifacts:newtag"  
+		
 	}
 	}
 }
